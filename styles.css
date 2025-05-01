@@ -1,0 +1,281 @@
+/* CSS BY Jesus Sanchez */
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT VARIABLES */
+:root {
+  --teal: #4CA7C0;
+  --purple: #484FB7;
+  --lavender: #6B8FE7;
+  --yellow: #E9BB57;
+  --pink: #D9526F;
+  --dark-gray: #1E1E1E;
+  --white: #ffffff;
+}
+
+/* GLOBAL STYLES (mobile first) */
+body {
+  background-color: var(--lavender);
+  color: var(--dark-gray);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+header,
+nav,
+main,
+footer {
+  width: 100%;
+  max-width: 450px;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  background-color: var(--purple);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  font-family: 'Kavoon', cursive;
+  font-size: 3em;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  color: var(--white);
+}
+
+/* NAVIGATION */
+nav {
+  background-color: var(--yellow);
+  padding: 1.5rem 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav h3 {
+  font-family: 'Inter';
+  font-size: 1.5em;
+  font-style: italic;
+  color: var(--dark-gray);
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: .5rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li + li {
+  margin-top: .5rem;
+}
+
+nav a {
+  display: block;
+  background-color: var(--white);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/* MAIN CONTENT */
+main {
+  background-color: var(--purple);
+
+}
+
+main h2 {
+  font-family: 'Kavoon', cursive;
+  font-size: 2em;
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+main h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5em;
+  color: var(--yellow);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+main h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15em;
+  color: var(--purple);
+  margin-bottom: 0.5rem;
+}
+
+/* SERVICES */
+#services{
+margin: 0rem 1rem;
+}
+#services h2 + h3{
+margin: -.5rem 0;
+}
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem .5rem;
+}
+
+.service-item figure {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 3rem;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.service-item div p {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  font-family: 'Inter', sans-serif;
+}
+
+/* WHY CHOOSE US */
+#why {
+  margin: 1rem 0;
+  background-color: var(--pink);
+  padding: 1rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.why-item {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  padding: 2.3rem 0;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 1;
+}
+
+.why-item:nth-child(1) { background-color: var(--teal); }
+.why-item:nth-child(2) { background-color: var(--lavender); }
+.why-item:nth-child(3) { background-color: var(--yellow); }
+.why-item:nth-child(4) { background-color: var(--white); }
+
+/* PRICING TABLES */
+
+#pricing {
+  margin: 1rem;
+
+}
+
+#pricing .price-title {
+  margin: 0;
+}
+
+#pricing .price-contents {
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
+  margin: 0 5rem 0 5rem;
+}
+
+#pricing .price-contents table {
+  width: 100%;
+  border-spacing: 2px;
+}
+
+#pricing .price-contents th {
+  color: var(--dark-gray);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem;
+  text-align: center;
+}
+
+#pricing .price-contents td {
+  color: var(--dark-gray);
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--white);
+}
+
+#pricing .price-contents td:first-child {
+  text-align: left;
+}
+
+/* CALL TO ACTION */
+#schedule {
+  background-color: var(--pink);
+  color: var(--white);
+  text-align: left;
+  padding: .1rem 1rem 1rem;
+  margin: -.5rem 0;
+}
+
+#schedule .button {
+  display: block;
+  margin: .5rem 1rem 0;
+  padding: 1rem;
+  background-color: var(--white);
+  color: var(--dark-gray);
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 1rem;
+  box-shadow: 5px 4px 8px rgba(0,0,0,1);
+
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 2rem;
+  font-size: .75rem;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: underline;
+}
